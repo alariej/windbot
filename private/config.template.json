@@ -1,0 +1,7 @@
+{
+	"userId": "botUserId",
+	"password": "botPassword",
+	"server": "myMatrixHomeserver",
+	"latitude": "latitude",
+	"longitude": "longitude"
+}
