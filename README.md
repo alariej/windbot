@@ -1,6 +1,6 @@
 # windBot
 
-A minimal bot for a Matrix homeserver, which provides the wind speed and direction, and the temperature, and sends a message if a given wind speed has been exceeded.
+A minimal bot for a Matrix homeserver, which provides the wind speed and direction, and the temperature, and automatically sends a message if a given wind speed has been exceeded.
 
 ## Installation
 
