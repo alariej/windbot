@@ -22,4 +22,4 @@ The bot will react to the following keywords (case doesn't matter):
 
 ## Note
 
-Currently, the wind speed limit is hardcoded at 15 km/h and the interval for checking the wind speed is 15 minutes.
+Currently, the wind speed limit is hardcoded at 20 km/h and the interval for checking the wind speed is 15 minutes.
