@@ -15,7 +15,7 @@ export const handleMessage = async (syncData: SyncResponse_, restClient: RestCli
 
 			if (lastEvent.type === 'm.room.message') {
 				const content = lastEvent.content as MessageEventContent_;
-				const key = content.body?.toUpperCase();
+				const key = content.body?.toUpperCase().trim();
 
 				let bodyReply = '';
 				switch (key) {
