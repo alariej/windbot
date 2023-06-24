@@ -17,7 +17,8 @@
 		"skipLibCheck": true,
 		"declaration": true,
 		"noResolve": false,
-		"outDir": "dist"
+		"outDir": "dist",
+		"rootDir": "src"
 	},
 	"lib": ["es20215"]
 }

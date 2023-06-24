@@ -6,8 +6,8 @@ A minimal node.js bot for a Matrix homeserver, which provides the wind speed and
 
 -   register bot user on Matrix homeserver, noting credentials
 -   invite Matrix user or users to a room
--   rename `/private/config.template.json` to `/private/config.json`
--   edit configuration values in `/private/config.json`
+-   rename or copy `config.template.json` to `config.json`
+-   edit configuration values in `config.json`
 -   `npm i`
 -   `npm run build`
 -   `node dist/windbot.js`

@@ -2,7 +2,7 @@ import { LoginParam_, MessageEventContent_ } from './MatrixApi';
 import RestClient from './RestClient';
 import sync, { PREFIX_REST } from './sync';
 import { getWeatherData } from './weatherData';
-import config from '../private/config.json';
+import config from './config.json';
 
 export const userId = config.userId;
 export const pwd = config.password;

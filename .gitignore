@@ -2,4 +2,4 @@ node_modules/*
 package-lock*
 dist/*
 dist-types/*
-private/config.json
+config.json
