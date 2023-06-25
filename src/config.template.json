@@ -3,5 +3,6 @@
 	"password": "botPassword",
 	"server": "myMatrixHomeserver",
 	"latitude": "latitude",
-	"longitude": "longitude"
+	"longitude": "longitude",
+	"openweathermapKey": "myApiKey"
 }

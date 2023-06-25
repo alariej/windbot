@@ -54,12 +54,14 @@ setInterval(() => {
 					const tempId = 'text' + Date.now();
 					const body =
 						'WIND NOTIFICATION\r\n' +
-						'Speed: ' +
-						response?.windSpeed +
-						' km/h\r\n' +
-						'Direction: ' +
-						response?.windDirection +
-						'°';
+						'Wind Speed: ' +
+						(response?.windSpeed ? response?.windSpeed + ' km/h' : '-') +
+						'\r\n' +
+						'Wind Gusts: ' +
+						(response?.windGust ? response?.windGust + ' km/h' : '-') +
+						'\r\n' +
+						'Wind Direction: ' +
+						(response?.windDirection ? response?.windDirection + '°' : '-');
 
 					const messageContent: MessageEventContent_ = {
 						msgtype: 'm.text',

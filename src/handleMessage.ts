@@ -59,31 +59,50 @@ const getWind = async (): Promise<string> => {
 	const response = await getWeatherData(latitude, longitude).catch(() => null);
 	return Promise.resolve(
 		'Wind Speed: ' +
-			(response?.windSpeed || '99.9') +
-			' km/h\r\n' +
+			(response?.windSpeed ? response?.windSpeed + ' km/h' : '-') +
+			'\r\n' +
+			'Wind Gusts: ' +
+			(response?.windGust ? response?.windGust + ' km/h' : '-') +
+			'\r\n' +
 			'Wind Direction: ' +
-			(response?.windDirection || '99.9') +
-			'°'
+			(response?.windDirection ? response?.windDirection + '°' : '-')
 	);
 };
 
 const getTemperature = async (): Promise<string> => {
 	const response = await getWeatherData(latitude, longitude).catch(() => null);
-	return Promise.resolve('Temperature: ' + (response?.temperature || '99.9') + '°C');
+	return Promise.resolve('Temperature: ' + (response?.temperature ? response?.temperature + '°C' : '-'));
 };
 
 const getWeather = async (): Promise<string> => {
 	const response = await getWeatherData(latitude, longitude).catch(() => null);
 	return Promise.resolve(
-		'Temperature: ' +
-			(response?.temperature || '99.9') +
-			'°C\r\n' +
+		'Description: ' +
+			(response?.description || '-') +
+			'\r\n' +
+			'Temperature: ' +
+			(response?.temperature ? response?.temperature + '°C' : '-') +
+			'\r\n' +
+			'Humidity: ' +
+			(response?.humidity ? response?.humidity + '%' : '-') +
+			'\r\n' +
+			'Pressure: ' +
+			(response?.pressure ? response?.pressure + ' hPa' : '-') +
+			'\r\n' +
 			'Wind Speed: ' +
-			(response?.windSpeed || '99.9') +
-			' km/h\r\n' +
+			(response?.windSpeed ? response?.windSpeed + ' km/h' : '-') +
+			'\r\n' +
+			'Wind Gusts: ' +
+			(response?.windGust ? response?.windGust + ' km/h' : '-') +
+			'\r\n' +
 			'Wind Direction: ' +
-			(response?.windDirection || '99.9') +
-			'°'
+			(response?.windDirection ? response?.windDirection + '°' : '-') +
+			'\r\n' +
+			'Sunrise: ' +
+			(response?.sunrise || '-') +
+			'\r\n' +
+			'Sunset: ' +
+			(response?.sunset || '-')
 	);
 };
 

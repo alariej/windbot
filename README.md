@@ -1,6 +1,6 @@
 # windBot
 
-A minimal node.js bot for a Matrix homeserver, which provides the wind speed and direction, and the temperature, and automatically sends a message to the room (or rooms) if a given wind speed has been exceeded.
+A minimal node.js bot for a Matrix homeserver, which provides wind and weather information, and automatically sends a message to the room (or rooms) if a given wind speed has been exceeded.
 
 ## Installation
 
@@ -12,7 +12,7 @@ A minimal node.js bot for a Matrix homeserver, which provides the wind speed and
 -   `npm run build`
 -   `node dist/windbot.js`
 
-The bot will react to the following keywords (case doesn't matter):
+The bot will react to the following keywords (case insensitive):
 
 -   WIND
 -   TEMP
@@ -23,4 +23,4 @@ The bot will react to the following keywords (case doesn't matter):
 ## Notes
 
 -   Currently, the wind speed limit is hardcoded at 20 km/h and the interval for checking the wind speed is 15 minutes
--   The weather data is obtained from [open-meteo.com](https://open-meteo.com)
+-   The weather data is obtained from [openweathermap.org](https://openweathermap.org), which requires an API key to fetch the data
