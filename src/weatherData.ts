@@ -38,12 +38,12 @@ export const getWeatherData = async (latitude: string, longitude: string): Promi
 		const weatherData = response.data as WeatherData;
 
 		const weatherInfo: WeatherInfo = {
-			temperature: (Math.round(weatherData.main.temp * 10) / 10).toString(),
-			humidity: Math.round(weatherData.main.humidity).toString(),
-			pressure: Math.round(weatherData.main.pressure).toString(),
-			windSpeed: (Math.round(weatherData.wind.speed * 3.6 * 10) / 10).toString(),
-			windGust: (Math.round(weatherData.wind.gust * 3.6 * 10) / 10).toString(),
-			windDirection: Math.round(weatherData.wind.deg).toString(),
+			temperature: weatherData.main.temp.toFixed(1),
+			humidity: weatherData.main.humidity.toFixed(0),
+			pressure: weatherData.main.pressure.toFixed(0),
+			windSpeed: (weatherData.wind.speed * 3.6).toFixed(1),
+			windGust: typeof weatherData.wind.gust === 'number' ? (weatherData.wind.gust * 3.6 * 10).toFixed(1) : '',
+			windDirection: weatherData.wind.deg.toFixed(0),
 			sunrise: new Date(weatherData.sys.sunrise * 1000)
 				.toLocaleTimeString('de-CH', {
 					timeZone: 'Europe/Zurich',
