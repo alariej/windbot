@@ -42,7 +42,7 @@ export const getWeatherData = async (latitude: string, longitude: string): Promi
 			humidity: weatherData.main.humidity.toFixed(0),
 			pressure: weatherData.main.pressure.toFixed(0),
 			windSpeed: (weatherData.wind.speed * 3.6).toFixed(1),
-			windGust: typeof weatherData.wind.gust === 'number' ? (weatherData.wind.gust * 3.6 * 10).toFixed(1) : '',
+			windGust: typeof weatherData.wind.gust === 'number' ? (weatherData.wind.gust * 3.6).toFixed(1) : '',
 			windDirection: weatherData.wind.deg.toFixed(0),
 			sunrise: new Date(weatherData.sys.sunrise * 1000)
 				.toLocaleTimeString('de-CH', {
