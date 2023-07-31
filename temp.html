@@ -1,0 +1,958 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Wetter�bersicht - Tiefenbrunnen Z�rich</title>
+		<meta
+			name="description"
+			content="Wetterwerte aktuell der Wetterstation alle 10 Minuten und Grafikanzeige �ber Tag, Monat und Jahr."
+		/>
+		<meta http-equiv="imagetoolbar" content="false" />
+		<style type="text/css">
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #000000;
+				background-color: #ffffff;
+			}
+			a:link {
+				color: #003366;
+			}
+			a:active {
+				color: #003366;
+			}
+			a:hover {
+				color: #003366;
+			}
+			a:visited {
+				color: #003366;
+			}
+			table {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #000000;
+				font-size: 11px;
+			}
+			.kopf {
+				background-color: #003366;
+				color: #ffffff;
+				font-weight: bold;
+				padding-left: 8px;
+			}
+			.kopf1 {
+				background-color: #e6e6e6;
+				border-bottom: 1px solid #666666;
+				border-top: 1px solid #666666;
+				height: 25px;
+				color: #000000;
+			}
+			.zeile {
+				border-bottom: 1px solid #666666;
+				height: 25px;
+				padding: 0px;
+				vertical-align: middle;
+				color: #666666;
+			}
+		</style>
+		<script type="text/javascript">
+			<!--   function Diagramm(formn){wTemp = window.open("","winTemp","width=750, height=600, left=50, top=50, screenX=70, screenY=70");document.forms[formn].submit();document.forms[formn].elements[2].selectedIndex=0;wTemp.focus();}function DiagrammTag(formn){wTemp = window.open("","winTemp","width=750, height=600, left=50, top=50, screenX=70, screenY=70");document.forms[formn].submit();wTemp.focus();}function DiagrammMonat(formn){wTemp = window.open("","winTemp","width=750, height=600, left=50, top=50, screenX=70, screenY=70");document.forms[formn].submit();wTemp.focus();}function DiagrammJahr(formn){wTemp = window.open("","winTemp","width=750, height=600, left=50, top=50, screenX=70, screenY=70");document.forms[formn].submit();wTemp.focus();}function BildZeigen(id){var e1='bild' + id;var e2='txt' + id;var bild=document.getElementById(e1).src;var txt=document.getElementById(e2).firstChild.nodeValue;document.getElementById(e1).src=document.getElementById('bildAkt').src;document.getElementById(e2).firstChild.nodeValue=document.getElementById('txtAkt').firstChild.nodeValue;document.getElementById('bildAkt').src=bild;document.getElementById('txtAkt').firstChild.nodeValue=txt;}//-->
+		</script>
+	</head>
+	<body onload="window.setTimeout('window.location.reload()', 300000);">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<table width="90%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" align="center">
+						<tr>
+							<td valign="top">
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									bgcolor="#FFFFFF"
+									align="center"
+								>
+									<tr>
+										<td>
+											<table width="100%" border="0" cellspacing="0" cellpadding="1">
+												<tr>
+													<td valign="middle" colspan="4" class="kopf1" nowrap>
+														&nbsp;&nbsp;<span style="font-weight: bold">Tiefenbrunnen</span>
+														&nbsp;&nbsp;&nbsp;&nbsp;
+														<span style="font-size: 11px"
+															>09.07.2023 16:40&nbsp;Uhr&nbsp;</span
+														>
+													</td>
+													<td width="7%" class="kopf1" align="center">
+														<span style="font-size: 11px">Tag</span>
+													</td>
+													<td width="7%" class="kopf1" align="center">
+														<span style="font-size: 11px">Monat</span>
+													</td>
+													<td width="7%" class="kopf1" align="center">
+														<span style="font-size: 11px">Jahr</span>
+													</td>
+												</tr>
+												<tr>
+													<td class="zeile" height="22" nowrap="nowrap" colspan="2">
+														<span style="font-weight: bold"
+															>&nbsp;&nbsp;Sturmwarnstufe:</span
+														>
+													</td>
+													<td class="zeile" width="*" colspan="5">
+														Es liegt <strong>keine</strong> Warnung vor.
+													</td>
+												</tr>
+												<form
+													name="Temp2m_tagb_0"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_temp" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="0"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="Temp2m_monat_0"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="0" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_temp" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="Temp2m_jahr_0"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="0" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_temp" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold"
+															>&nbsp;&nbsp;Lufttemperatur:</span
+														>
+													</td>
+													<td width="15%" align="right" class="zeile">30.4&nbsp;</td>
+													<td width="12%" class="zeile">&nbsp;�C</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/tsteig.gif"
+															alt="Temperatur steigt"
+															title="Temperatur steigt"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('Temp2m_tagb_0');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('Temp2m_monat_0');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('Temp2m_jahr_0');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+												<form
+													name="Feuchte_tagb_1"
+													method="post"
+													action="../diagramme/diagramm.php?diag=lfeuchte_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_lf" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="1"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="Feuchte_monat_1"
+													method="post"
+													action="../diagramme/diagramm.php?diag=lfeuchte_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="1" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_lf" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="Feuchte_jahr_1"
+													method="post"
+													action="../diagramme/diagramm.php?diag=lfeuchte_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="1" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_lf" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold">&nbsp;&nbsp;Luftfeuchte:</span>
+													</td>
+													<td width="15%" align="right" class="zeile">42&nbsp;</td>
+													<td width="12%" class="zeile">&nbsp;%</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/lffall.gif"
+															alt="Luftfeuchte f�llt"
+															title="Luftfeuchte f�llt"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('Feuchte_tagb_1');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('Feuchte_monat_1');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('Feuchte_jahr_1');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+												<form
+													name="WGmax_tagb_2"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windg_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_wg" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="2"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="WGmax_monat_2"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windg_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="2" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_wg" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="WGmax_jahr_2"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windg_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="2" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_wg" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold"
+															>&nbsp;&nbsp;Windb�en (max) 10 min.:</span
+														>
+													</td>
+													<td width="15%" align="right" class="zeile">0.7&nbsp;</td>
+													<td width="12%" class="zeile">&nbsp;m/s</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/wkein.gif"
+															alt="Kein Wind"
+															title="Kein Wind"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('WGmax_tagb_2');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('WGmax_monat_2');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('WGmax_jahr_2');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+												<form
+													name="WGavr_tagb_3"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windg_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_wg" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="3"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="WGavr_monat_3"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windg_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="3" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_wg" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="WGavr_jahr_3"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windg_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="3" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_wg" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold"
+															>&nbsp;&nbsp;Windgeschw. � 10min.:</span
+														>
+													</td>
+													<td width="15%" align="right" class="zeile">0&nbsp;</td>
+													<td width="12%" class="zeile">&nbsp;m/s</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/wkein.gif"
+															alt="Kein Wind"
+															title="Kein Wind"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('WGavr_tagb_3');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('WGavr_monat_3');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('WGavr_jahr_3');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+												<form
+													name="Umr_Beaufort_tagb_4"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windg_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_wg" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="4"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="Umr_Beaufort_monat_4"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windg_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="4" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_wg" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="Umr_Beaufort_jahr_4"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windg_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="4" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_wg" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold"
+															>&nbsp;&nbsp;Windst�rke � 10 min.:</span
+														>
+													</td>
+													<td width="15%" align="right" class="zeile">0&nbsp;</td>
+													<td width="12%" class="zeile">&nbsp;bft</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/wkein.gif"
+															alt="Windstille"
+															title="Windstille"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('Umr_Beaufort_tagb_4');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('Umr_Beaufort_monat_4');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('Umr_Beaufort_jahr_4');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+												<form
+													name="WRvek_tagb_5"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windr_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_wr" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="5"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="WRvek_monat_5"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windr_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="5" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_wr" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="WRvek_jahr_5"
+													method="post"
+													action="../diagramme/diagramm.php?diag=windr_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="5" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_wr" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold">&nbsp;&nbsp;Windrichtung:</span>
+													</td>
+													<td colspan="2" align="center" class="zeile">
+														S&nbsp;(172&deg;)&nbsp;
+													</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/S.gif"
+															alt="S&uuml;d"
+															title="S&uuml;d"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('WRvek_tagb_5');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('WRvek_monat_5');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('WRvek_jahr_5');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+												<form
+													name="Windchill_tagb_6"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_temp" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="6"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="Windchill_monat_6"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="6" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_temp" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="Windchill_jahr_6"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="6" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_temp" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold">&nbsp;&nbsp;Windchill:</span>
+													</td>
+													<td width="15%" align="right" class="zeile">30.4&nbsp;</td>
+													<td width="12%" class="zeile">&nbsp;�C</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/tsteig.gif"
+															alt="Temperatur steigt"
+															title="Temperatur steigt"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('Windchill_tagb_6');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('Windchill_monat_6');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('Windchill_jahr_6');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+												<form
+													name="TempWasser_tagb_7"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_temp" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="7"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="TempWasser_monat_7"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="7" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_temp" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="TempWasser_jahr_7"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="7" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_temp" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold"
+															>&nbsp;&nbsp;Wassertemperatur:</span
+														>
+													</td>
+													<td width="15%" align="right" class="zeile">24.9&nbsp;</td>
+													<td width="12%" class="zeile">&nbsp;�C</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/tkonst.gif"
+															alt="Temperatur ist gleichbleibend"
+															title="Temperatur ist gleichbleibend"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('TempWasser_tagb_7');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('TempWasser_monat_7');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('TempWasser_jahr_7');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+												<form
+													name="LuftdruckQFE_tagb_8"
+													method="post"
+													action="../diagramme/diagramm.php?diag=ldruck_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_ld" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="8"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="LuftdruckQFE_monat_8"
+													method="post"
+													action="../diagramme/diagramm.php?diag=ldruck_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="8" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_ld" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="LuftdruckQFE_jahr_8"
+													method="post"
+													action="../diagramme/diagramm.php?diag=ldruck_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="8" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_ld" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold"
+															>&nbsp;&nbsp;Luftdruck QFE:</span
+														>
+													</td>
+													<td width="15%" align="right" class="zeile">971.7&nbsp;</td>
+													<td width="12%" class="zeile">&nbsp;hPa</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/ldfall.gif"
+															alt="Luftdruck f�llt"
+															title="Luftdruck f�llt"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('LuftdruckQFE_tagb_8');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('LuftdruckQFE_monat_8');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('LuftdruckQFE_jahr_8');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+												<form
+													name="Taupunkt_tagb_9"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_tag.php"
+													target="winTemp"
+												>
+													<input name="datum_temp" type="hidden" value="09.07.2023" /><input
+														type="hidden"
+														name="spalte"
+														value="9"
+													/><input type="hidden" name="combilog" value="tiefenbrunnen" />
+												</form>
+												<form
+													name="Taupunkt_monat_9"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_mon.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="9" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="monat_temp" type="hidden" value="2023-07" />
+												</form>
+												<form
+													name="Taupunkt_jahr_9"
+													method="post"
+													action="../diagramme/diagramm.php?diag=dtemp_jahr.php"
+													target="winTemp"
+												>
+													<input type="hidden" name="spalte" value="9" /><input
+														type="hidden"
+														name="combilog"
+														value="tiefenbrunnen"
+													/><input name="jahr_temp" type="hidden" value="2023" />
+												</form>
+												<tr>
+													<td width="40%" height="22" class="zeile" nowrap>
+														<span style="font-weight: bold">&nbsp;&nbsp;Taupunkt:</span>
+													</td>
+													<td width="15%" align="right" class="zeile">15.7&nbsp;</td>
+													<td width="12%" class="zeile">&nbsp;�C</td>
+													<td width="*" class="zeile">
+														<img
+															src="../system/picminiK/tfall.gif"
+															alt="Temperatur f�llt"
+															title="Temperatur f�llt"
+														/>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammTag('Taupunkt_tagb_9');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Tagesdiagramm"
+																alt="Tagesdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammMonat('Taupunkt_monat_9');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Monatsdiagramm"
+																alt="Monatsdiagramm"
+														/></a>
+													</td>
+													<td width="8%" class="zeile" align="center">
+														<a
+															href="javascript:DiagrammJahr('Taupunkt_jahr_9');"
+															style="cursor: pointer"
+															><img
+																src="../pic/diagrLklein.gif"
+																border="0"
+																title="Jahresdiagramm"
+																alt="Jahresdiagramm"
+														/></a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,6 +1,7 @@
 import { MessageEventContent_, SyncResponse_ } from './MatrixApi';
 import RestClient from './RestClient';
 import { getWeatherData } from './weatherData';
+import { getWeatherDataSP } from './weatherDataSP';
 import { latitude, longitude, rooms, server, userId } from './windbot';
 
 // const commands = ['WIND', 'TEMP', 'WEATHER', 'START', 'STOP', 'UP', 'DOWN', 'HELP'];
@@ -37,6 +38,10 @@ export const handleMessage = async (syncData: SyncResponse_, restClient: RestCli
 
 					case 'STOP':
 						bodyReply = stopNotifications(roomId);
+						break;
+
+					case 'TEST':
+						bodyReply = await getWeatherDataSP().catch(() => '');
 						break;
 
 					default:
